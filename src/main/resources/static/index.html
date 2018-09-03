@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Insert title here</title>
+<script type="text/javascript" src="js/glexample-min.js"></script>
+<script type="x-shader/x-vertex" id="vertex-shader">
+precision highp float;
+attribute float position;
+void main() {
+	gl_Position = vec4(position, 0.0, 0.0, 1.0);
+	gl_PointSize = 32.0;
+}
+</script>
+<script type="x-shader/x-fragment" id="fragment-shader">
+precision mediump float;
+void main() {
+	gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+}
+</script>
+<style type="text/css">
+* {
+    margin: 0px;
+    padding: 0px;
+}
+</style>
+</head>
+
+<body>
+<canvas width="512" height="448"></canvas>
+</body>
+</html>
